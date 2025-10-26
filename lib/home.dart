@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 90), // jarak antara card dan tombol
+            const SizedBox(height: 100), // jarak antara card dan tombol
 
             // Tombol Input Data Produksi
             ElevatedButton(
