@@ -30,14 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset('assets/logo.png', width: 120),
             const SizedBox(height: 20),
-            const Text(
-              'Umey Mey Fashion',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.pink,
-              ),
-            ),
           ],
         ),
       ),
