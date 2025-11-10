@@ -25,9 +25,22 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.pink[100],
       body: Center(
-        child: Image.asset(
-          'assets/logo.png',
-          width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/logo.png', height: 150),
+            const SizedBox(height: 20),
+            const Text(
+              "Umey Ney Fashion",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.pink,
+              ),
+            ),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(color: Colors.pink),
+          ],
         ),
       ),
     );

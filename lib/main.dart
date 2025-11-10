@@ -12,11 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Umey Mey Fashion',
+      title: 'Umey Ney Fashion',
       theme: ThemeData(
-        primaryColor: Colors.pink[300],
-        scaffoldBackgroundColor: Colors.white,
-        useMaterial3: true,
+        primarySwatch: Colors.pink,
       ),
       home: const SplashScreen(),
     );

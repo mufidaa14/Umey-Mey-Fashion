@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
-import '../widgets/bottom_nav.dart';
+import 'login.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final usernameController = TextEditingController();
+    final emailController = TextEditingController();
     final passwordController = TextEditingController();
 
     return Scaffold(
@@ -20,19 +20,27 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Sign In",
+                  "Sign Up",
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Text("Welcome back, you've been missed!"),
+                const Text("Create your account to get started!"),
                 const SizedBox(height: 30),
                 TextField(
                   controller: usernameController,
                   decoration: const InputDecoration(
                     labelText: "User Name",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                TextField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
+                    labelText: "Email",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -55,28 +63,28 @@ class LoginPage extends StatelessWidget {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const BottomNavBar(),
+                        builder: (context) => const LoginPage(),
                       ),
                     );
                   },
-                  child: const Text("Login"),
+                  child: const Text("Register"),
                 ),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account? "),
+                    const Text("Already have an account? "),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignUpPage(),
+                            builder: (context) => const LoginPage(),
                           ),
                         );
                       },
                       child: const Text(
-                        "Register now",
+                        "Login",
                         style: TextStyle(color: Colors.redAccent),
                       ),
                     ),
