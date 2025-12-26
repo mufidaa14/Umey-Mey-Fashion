@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFF06292)), // Warna pink yang mirip
         useMaterial3: true,
       ),
-      initialRoute: '/',
+      // initialRoute: '/', // Hapus ini atau komentar
+      home: const app_splash.SplashScreen(), // Gunakan home untuk rute awal
       routes: {
-        // <-- PERUBAHAN DI SINI
-        '/': (context) => const app_splash.SplashScreen(), 
+        // '/': (context) => const app_splash.SplashScreen(), // Hapus atau komentar definisi '/'
         '/auth': (context) => const AuthScreen(),
         '/main': (context) => const MainScreen(),
       },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'detail_pesanan_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Image.asset(
-                                'assets/images/sewing_illustration.png', // Ganti dengan ilustrasi Anda
+                                'assets/woman.png', // Ganti dengan ilustrasi Anda
                                 height: 150,
                                 fit: BoxFit.fitHeight),
                           ),
@@ -155,7 +156,7 @@ class HomeScreen extends StatelessWidget {
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
                 // Gambar Produk akan ditempatkan di sini
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/product_placeholder.png'), // Ganti dengan gambar produk
+                  image: AssetImage('assets/produk.png'), // Ganti dengan gambar produk
                   fit: BoxFit.cover,
                 ),
               ),

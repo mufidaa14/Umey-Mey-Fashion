@@ -13,8 +13,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Pindah ke layar otentikasi setelah 3 detik
     Future.delayed(const Duration(seconds: 3), () {
-      // Pastikan rute '/auth' sudah dideklarasikan di main.dart
-      Navigator.of(context).pushReplacementNamed('/auth');
+      if (!mounted) return;
+      // Gunakan pushNamed dulu untuk debugging agar stack tidak kosong
+      Navigator.of(context).pushNamed('/auth');
     });
   }
 
@@ -23,26 +24,12 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold( // Hapus 'const' di sini karena children memiliki Image.asset
       backgroundColor: const Color(0xFFFCE4EC), // Pink muda
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // HAPUS KATA KUNCI 'const' di depan Image.asset!
-            // Menggunakan path 'assets/logo.png' sesuai struktur folder Anda.
             Image.asset(
               'assets/logo.png', 
-              height: 100, // Sesuaikan ukuran sesuai kebutuhan
-            ),
-            
-            const SizedBox(height: 10), // Ini boleh const
-            const Text(
-              'Umey mey \nFASHION',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFFF06292), // Warna pink yang kuat
-                fontFamily: 'Montserrat', // Contoh font
-              ),
+              height: 80, 
             ),
           ],
         ),

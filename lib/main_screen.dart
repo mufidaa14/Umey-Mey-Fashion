@@ -64,11 +64,3 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-// Placeholder untuk ProfileScreen
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('Halaman Profil'));
-  }
-}
